@@ -9,6 +9,21 @@
 /* Begin PBXBuildFile section */
 		00AF9A071B740D280060EC87 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A061B740D280060EC87 /* main.cpp */; };
 		00AF9A091B740D280060EC87 /* raytracer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00AF9A081B740D280060EC87 /* raytracer.1 */; };
+		00AF9A111B741CC20060EC87 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A0F1B741CC20060EC87 /* Vector.cpp */; };
+		00AF9A141B741DE60060EC87 /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A121B741DE60060EC87 /* Color.cpp */; };
+		00AF9A171B741F840060EC87 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A151B741F840060EC87 /* Camera.cpp */; };
+		00AF9A2E1B74A4C20060EC87 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A2C1B74A4C20060EC87 /* Sphere.cpp */; };
+		00AF9A321B74AEA80060EC87 /* Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A301B74AEA80060EC87 /* Plane.cpp */; };
+		00AF9A351B74AFC30060EC87 /* Surfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A331B74AFC30060EC87 /* Surfaces.cpp */; };
+		00AF9A381B74B2740060EC87 /* RayTracer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A361B74B2740060EC87 /* RayTracer.cpp */; };
+		00AF9A3B1B74B5540060EC87 /* Drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A391B74B5540060EC87 /* Drawing.cpp */; };
+		00AF9A3E1B74B7FB0060EC87 /* DrawingColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A3C1B74B7FB0060EC87 /* DrawingColor.cpp */; };
+		00AF9A411B74C86A0060EC87 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A401B74C86A0060EC87 /* Scene.cpp */; };
+		00AF9A431B74D4BF0060EC87 /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A421B74D4BF0060EC87 /* Light.cpp */; };
+		00AF9A451B74D5C90060EC87 /* Thing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A441B74D5C90060EC87 /* Thing.cpp */; };
+		00AF9A471B74DEDE0060EC87 /* Surface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A461B74DEDE0060EC87 /* Surface.cpp */; };
+		00AF9A491B74E0F10060EC87 /* Intersection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A481B74E0F10060EC87 /* Intersection.cpp */; };
+		00AF9A4B1B74E5DA0060EC87 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AF9A4A1B74E5DA0060EC87 /* Ray.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +42,37 @@
 /* Begin PBXFileReference section */
 		00AF9A031B740D280060EC87 /* raytracer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = raytracer; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AF9A061B740D280060EC87 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		00AF9A081B740D280060EC87 /* raytracer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = raytracer.1; sourceTree = "<group>"; };
+		00AF9A081B740D280060EC87 /* raytracer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; name = raytracer.1; path = raytracer/raytracer.1; sourceTree = "<group>"; };
+		00AF9A0F1B741CC20060EC87 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
+		00AF9A101B741CC20060EC87 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		00AF9A121B741DE60060EC87 /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
+		00AF9A131B741DE60060EC87 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		00AF9A151B741F840060EC87 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		00AF9A161B741F840060EC87 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		00AF9A191B7420820060EC87 /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = "<group>"; };
+		00AF9A1C1B74A0A40060EC87 /* Intersection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intersection.h; sourceTree = "<group>"; };
+		00AF9A1F1B74A19B0060EC87 /* Surface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface.h; sourceTree = "<group>"; };
+		00AF9A221B74A2130060EC87 /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thing.h; sourceTree = "<group>"; };
+		00AF9A251B74A3960060EC87 /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+		00AF9A281B74A3E80060EC87 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		00AF9A2C1B74A4C20060EC87 /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = "<group>"; };
+		00AF9A2D1B74A4C20060EC87 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
+		00AF9A301B74AEA80060EC87 /* Plane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plane.cpp; sourceTree = "<group>"; };
+		00AF9A311B74AEA80060EC87 /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
+		00AF9A331B74AFC30060EC87 /* Surfaces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surfaces.cpp; sourceTree = "<group>"; };
+		00AF9A341B74AFC30060EC87 /* Surfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surfaces.h; sourceTree = "<group>"; };
+		00AF9A361B74B2740060EC87 /* RayTracer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RayTracer.cpp; sourceTree = "<group>"; };
+		00AF9A371B74B2740060EC87 /* RayTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RayTracer.h; sourceTree = "<group>"; };
+		00AF9A391B74B5540060EC87 /* Drawing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Drawing.cpp; sourceTree = "<group>"; };
+		00AF9A3A1B74B5540060EC87 /* Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawing.h; sourceTree = "<group>"; };
+		00AF9A3C1B74B7FB0060EC87 /* DrawingColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawingColor.cpp; sourceTree = "<group>"; };
+		00AF9A3D1B74B7FB0060EC87 /* DrawingColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingColor.h; sourceTree = "<group>"; };
+		00AF9A401B74C86A0060EC87 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		00AF9A421B74D4BF0060EC87 /* Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
+		00AF9A441B74D5C90060EC87 /* Thing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Thing.cpp; sourceTree = "<group>"; };
+		00AF9A461B74DEDE0060EC87 /* Surface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface.cpp; sourceTree = "<group>"; };
+		00AF9A481B74E0F10060EC87 /* Intersection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Intersection.cpp; sourceTree = "<group>"; };
+		00AF9A4A1B74E5DA0060EC87 /* Ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ray.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				00AF9A051B740D280060EC87 /* raytracer */,
+				00AF9A081B740D280060EC87 /* raytracer.1 */,
 				00AF9A041B740D280060EC87 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,9 +107,70 @@
 			isa = PBXGroup;
 			children = (
 				00AF9A061B740D280060EC87 /* main.cpp */,
-				00AF9A081B740D280060EC87 /* raytracer.1 */,
+				00AF9A3F1B74BE590060EC87 /* Drawing */,
+				00AF9A2A1B74A4A60060EC87 /* Types */,
+				00AF9A2B1B74A4B00060EC87 /* Interfaces */,
+				00AF9A2F1B74A4CB0060EC87 /* Implementations */,
 			);
 			path = raytracer;
+			sourceTree = "<group>";
+		};
+		00AF9A2A1B74A4A60060EC87 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				00AF9A0F1B741CC20060EC87 /* Vector.cpp */,
+				00AF9A101B741CC20060EC87 /* Vector.h */,
+				00AF9A121B741DE60060EC87 /* Color.cpp */,
+				00AF9A131B741DE60060EC87 /* Color.h */,
+				00AF9A151B741F840060EC87 /* Camera.cpp */,
+				00AF9A161B741F840060EC87 /* Camera.h */,
+				00AF9A401B74C86A0060EC87 /* Scene.cpp */,
+				00AF9A281B74A3E80060EC87 /* Scene.h */,
+				00AF9A421B74D4BF0060EC87 /* Light.cpp */,
+				00AF9A251B74A3960060EC87 /* Light.h */,
+				00AF9A481B74E0F10060EC87 /* Intersection.cpp */,
+				00AF9A1C1B74A0A40060EC87 /* Intersection.h */,
+				00AF9A4A1B74E5DA0060EC87 /* Ray.cpp */,
+				00AF9A191B7420820060EC87 /* Ray.h */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
+		00AF9A2B1B74A4B00060EC87 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				00AF9A461B74DEDE0060EC87 /* Surface.cpp */,
+				00AF9A1F1B74A19B0060EC87 /* Surface.h */,
+				00AF9A441B74D5C90060EC87 /* Thing.cpp */,
+				00AF9A221B74A2130060EC87 /* Thing.h */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		00AF9A2F1B74A4CB0060EC87 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				00AF9A2C1B74A4C20060EC87 /* Sphere.cpp */,
+				00AF9A2D1B74A4C20060EC87 /* Sphere.h */,
+				00AF9A301B74AEA80060EC87 /* Plane.cpp */,
+				00AF9A311B74AEA80060EC87 /* Plane.h */,
+				00AF9A331B74AFC30060EC87 /* Surfaces.cpp */,
+				00AF9A341B74AFC30060EC87 /* Surfaces.h */,
+				00AF9A361B74B2740060EC87 /* RayTracer.cpp */,
+				00AF9A371B74B2740060EC87 /* RayTracer.h */,
+			);
+			name = Implementations;
+			sourceTree = "<group>";
+		};
+		00AF9A3F1B74BE590060EC87 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				00AF9A391B74B5540060EC87 /* Drawing.cpp */,
+				00AF9A3A1B74B5540060EC87 /* Drawing.h */,
+				00AF9A3C1B74B7FB0060EC87 /* DrawingColor.cpp */,
+				00AF9A3D1B74B7FB0060EC87 /* DrawingColor.h */,
+			);
+			name = Drawing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +224,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00AF9A321B74AEA80060EC87 /* Plane.cpp in Sources */,
+				00AF9A471B74DEDE0060EC87 /* Surface.cpp in Sources */,
+				00AF9A351B74AFC30060EC87 /* Surfaces.cpp in Sources */,
+				00AF9A491B74E0F10060EC87 /* Intersection.cpp in Sources */,
+				00AF9A4B1B74E5DA0060EC87 /* Ray.cpp in Sources */,
+				00AF9A171B741F840060EC87 /* Camera.cpp in Sources */,
+				00AF9A381B74B2740060EC87 /* RayTracer.cpp in Sources */,
+				00AF9A3B1B74B5540060EC87 /* Drawing.cpp in Sources */,
+				00AF9A111B741CC20060EC87 /* Vector.cpp in Sources */,
+				00AF9A431B74D4BF0060EC87 /* Light.cpp in Sources */,
+				00AF9A411B74C86A0060EC87 /* Scene.cpp in Sources */,
+				00AF9A451B74D5C90060EC87 /* Thing.cpp in Sources */,
+				00AF9A3E1B74B7FB0060EC87 /* DrawingColor.cpp in Sources */,
+				00AF9A2E1B74A4C20060EC87 /* Sphere.cpp in Sources */,
+				00AF9A141B741DE60060EC87 /* Color.cpp in Sources */,
 				00AF9A071B740D280060EC87 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
