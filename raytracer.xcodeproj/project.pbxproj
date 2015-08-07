@@ -40,8 +40,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0035AFA01B753E7000264277 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		0035AFA11B753ED400264277 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		0035AFA41B756E2D00264277 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		0035AFA51B756E2D00264277 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		0035AFA61B756E2D00264277 /* raytracer.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = raytracer.ts; sourceTree = "<group>"; };
+		0035AFA71B756E2D00264277 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		00AF9A031B740D280060EC87 /* raytracer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = raytracer; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AF9A061B740D280060EC87 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		00AF9A081B740D280060EC87 /* raytracer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; name = raytracer.1; path = raytracer/raytracer.1; sourceTree = "<group>"; };
@@ -75,7 +77,6 @@
 		00AF9A461B74DEDE0060EC87 /* Surface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface.cpp; sourceTree = "<group>"; };
 		00AF9A481B74E0F10060EC87 /* Intersection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Intersection.cpp; sourceTree = "<group>"; };
 		00AF9A4A1B74E5DA0060EC87 /* Ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ray.cpp; sourceTree = "<group>"; };
-		00AF9A4C1B753B7F0060EC87 /* raytracer.ts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = raytracer.ts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +106,10 @@
 			children = (
 				00AF9A051B740D280060EC87 /* raytracer */,
 				00AF9A081B740D280060EC87 /* raytracer.1 */,
+				0035AFA71B756E2D00264277 /* README.md */,
+				0035AFA41B756E2D00264277 /* build.sh */,
+				0035AFA51B756E2D00264277 /* LICENSE.txt */,
+				0035AFA61B756E2D00264277 /* raytracer.ts */,
 				00AF9A041B740D280060EC87 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,9 +131,6 @@
 				00AF9A2B1B74A4B00060EC87 /* Interfaces */,
 				00AF9A2F1B74A4CB0060EC87 /* Implementations */,
 				0035AFA31B754E5C00264277 /* Rendering */,
-				00AF9A4C1B753B7F0060EC87 /* raytracer.ts */,
-				0035AFA01B753E7000264277 /* README.md */,
-				0035AFA11B753ED400264277 /* LICENSE.txt */,
 			);
 			path = raytracer;
 			sourceTree = "<group>";
