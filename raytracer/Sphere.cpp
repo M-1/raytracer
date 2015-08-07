@@ -21,11 +21,11 @@ Vector Sphere::normal(const Vector & pos) const {
 }
 
 std::unique_ptr<Intersection> Sphere::intersect(const Ray & ray) const {
-	auto eo = Vector::minus(center, ray.start);
-	auto v = Vector::dot(eo, ray.dir);
-	auto dist = 0;
+	Vector eo = Vector::minus(center, ray.start);
+	float v = Vector::dot(eo, ray.dir);
+	float dist = 0;
 	if (v >= 0) {
-		auto disc = radius2 - (Vector::dot(eo, eo) - v * v);
+		float disc = radius2 - (Vector::dot(eo, eo) - v * v);
 		if (disc >= 0) {
 			dist = v - std::sqrt(disc);
 		}
