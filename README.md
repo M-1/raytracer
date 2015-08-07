@@ -10,5 +10,5 @@ TODO:
 
 * further optimisations
 * link statically with C++ std lib to avoid dynamic linking overhead
- 
- Pull requests are welcome!
+
+Pull requests are welcome!
