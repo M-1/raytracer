@@ -7,7 +7,8 @@ Based on raytracer.ts (TypeScript code sample) from http://typescript.codeplex.c
 Rewritten/translated from TypeScript to C++ by Martin Mi
 
 TODO:
- - further optimisations
- - link statically with C++ std lib to avoid dynamic linking overhead
+
+* further optimisations
+* link statically with C++ std lib to avoid dynamic linking overhead
  
  Pull requests are welcome!
