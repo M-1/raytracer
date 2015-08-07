@@ -19,7 +19,7 @@ struct Plane : public Thing {
 	Plane(const Vector & norm, float offset, const Surface & surface);
 	
 	virtual Vector normal(const Vector & pos) const;
-	virtual std::unique_ptr<Intersection> intersect(const Ray & ray) const;
+	virtual std::pair<bool, Intersection> intersect(const Ray & ray) const;
 };
 
 #endif /* defined(__raytracer__Plane__) */

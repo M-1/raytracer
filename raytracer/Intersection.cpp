@@ -8,5 +8,8 @@
 
 #include "Intersection.h"
 
-Intersection::Intersection(const Thing & thing, const Ray & ray, float dist) : thing(thing), ray(ray), dist(dist) {
+Intersection::Intersection() : thing(nullptr), ray(nullptr) {
+}
+
+Intersection::Intersection(const Thing & thing, const Ray & ray, float dist) : thing(&thing), ray(&ray), dist(dist) {
 }

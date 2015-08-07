@@ -20,7 +20,7 @@ Vector Sphere::normal(const Vector & pos) const {
 	return Vector::norm(Vector::minus(pos, center));
 }
 
-std::unique_ptr<Intersection> Sphere::intersect(const Ray & ray) const {
+std::pair<bool, Intersection> Sphere::intersect(const Ray & ray) const {
 	Vector eo = Vector::minus(center, ray.start);
 	float v = Vector::dot(eo, ray.dir);
 	float dist = 0;
@@ -31,8 +31,8 @@ std::unique_ptr<Intersection> Sphere::intersect(const Ray & ray) const {
 		}
 	}
 	if (dist == 0) {
-		return nullptr;
+		return std::make_pair(false, Intersection());
 	} else {
-		return std::unique_ptr<Intersection>(new Intersection(*this, ray, dist));
+		return std::make_pair(true, Intersection(*this, ray, dist));
 	}
 }

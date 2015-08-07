@@ -13,10 +13,12 @@
 #include "Ray.h"
 
 struct Intersection {
+	Intersection();
 	Intersection(const Thing & thing, const Ray & ray, float dist);
 	
-	const Thing & thing;
-	const Ray & ray;
+	// TODO: use getters to hide pointer vs reference differences in fields of different classes?
+	const Thing * thing;
+	const Ray * ray;
 	float dist;
 };
 

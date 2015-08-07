@@ -28,7 +28,7 @@ class RayTracer {
 	depth_t maxDepth = 5;
 	
 	//! Returns first (closest) intersection
-	std::unique_ptr<Intersection> intersections(const Ray & ray, const Scene & scene);
+	std::pair<bool, Intersection> intersections(const Ray & ray, const Scene & scene);
 	float testRay(const Ray & ray, const Scene & scene);
 	Color traceRay(const Ray & ray, const Scene & scene, depth_t depth);
 	Color shade(const Intersection & isect, const Scene & scene, depth_t depth);

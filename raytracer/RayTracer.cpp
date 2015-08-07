@@ -17,13 +17,13 @@
 #include "Intersection.h"
 #include "Surface.h"
 
-std::unique_ptr<Intersection> RayTracer::intersections(const Ray & ray, const Scene & scene) {
+std::pair<bool, Intersection> RayTracer::intersections(const Ray & ray, const Scene & scene) {
 	auto closest = std::numeric_limits<float>::infinity();
-	std::unique_ptr<Intersection> closestInter;
+	std::pair<bool, Intersection> closestInter;
 	for (auto & thing_ptr : scene.things) {
 		auto inter = thing_ptr->intersect(ray);
-		if (inter != nullptr && inter->dist < closest) {
-			closest = inter->dist;
+		if (inter.first && inter.second.dist < closest) {
+			closest = inter.second.dist;
 			closestInter = std::move(inter);
 		}
 	}
@@ -32,8 +32,8 @@ std::unique_ptr<Intersection> RayTracer::intersections(const Ray & ray, const Sc
 
 float RayTracer::testRay(const Ray & ray, const Scene & scene) {
 	auto isect = intersections(ray, scene);
-	if (isect != nullptr) {
-		return isect->dist;
+	if (isect.first) {
+		return isect.second.dist;
 	} else {
 		return std::numeric_limits<float>::infinity();
 	}
@@ -41,21 +41,21 @@ float RayTracer::testRay(const Ray & ray, const Scene & scene) {
 
 Color RayTracer::traceRay(const Ray & ray, const Scene & scene, depth_t depth) {
 	auto isect = intersections(ray, scene);
-	if (isect == nullptr) {
+	if (!isect.first) {
 		return Color::background;
 	} else {
-		return shade(*isect, scene, depth);
+		return shade(isect.second, scene, depth);
 	}
 }
 
 Color RayTracer::shade(const Intersection & isect, const Scene & scene, depth_t depth) {
-	auto d = isect.ray.dir;
-	auto pos = Vector::plus(Vector::times(isect.dist, d), isect.ray.start);
-	auto normal = isect.thing.normal(pos);
+	auto d = isect.ray->dir;
+	auto pos = Vector::plus(Vector::times(isect.dist, d), isect.ray->start);
+	auto normal = isect.thing->normal(pos);
 	auto reflectDir = Vector::minus(d, Vector::times(2, Vector::times(Vector::dot(normal, d), normal)));
 	auto naturalColor = Color::plus(Color::background,
-									getNaturalColor(isect.thing, pos, normal, reflectDir, scene));
-	auto reflectedColor = (depth >= maxDepth) ? Color::grey : getReflectionColor(isect.thing, pos, normal, reflectDir, scene, depth);
+									getNaturalColor(*isect.thing, pos, normal, reflectDir, scene));
+	auto reflectedColor = (depth >= maxDepth) ? Color::grey : getReflectionColor(*isect.thing, pos, normal, reflectDir, scene, depth);
 	return Color::plus(naturalColor, reflectedColor);
 }
 

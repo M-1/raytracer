@@ -89,6 +89,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0035AFA31B754E5C00264277 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				00AF9A331B74AFC30060EC87 /* Surfaces.cpp */,
+				00AF9A341B74AFC30060EC87 /* Surfaces.h */,
+				00AF9A361B74B2740060EC87 /* RayTracer.cpp */,
+				00AF9A371B74B2740060EC87 /* RayTracer.h */,
+			);
+			name = Rendering;
+			sourceTree = "<group>";
+		};
 		00AF99FA1B740D280060EC87 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +125,7 @@
 				00AF9A2A1B74A4A60060EC87 /* Types */,
 				00AF9A2B1B74A4B00060EC87 /* Interfaces */,
 				00AF9A2F1B74A4CB0060EC87 /* Implementations */,
+				0035AFA31B754E5C00264277 /* Rendering */,
 				00AF9A4C1B753B7F0060EC87 /* raytracer.ts */,
 				0035AFA01B753E7000264277 /* README.md */,
 				0035AFA11B753ED400264277 /* LICENSE.txt */,
@@ -160,10 +172,6 @@
 				00AF9A2D1B74A4C20060EC87 /* Sphere.h */,
 				00AF9A301B74AEA80060EC87 /* Plane.cpp */,
 				00AF9A311B74AEA80060EC87 /* Plane.h */,
-				00AF9A331B74AFC30060EC87 /* Surfaces.cpp */,
-				00AF9A341B74AFC30060EC87 /* Surfaces.h */,
-				00AF9A361B74B2740060EC87 /* RayTracer.cpp */,
-				00AF9A371B74B2740060EC87 /* RayTracer.h */,
 			);
 			name = Implementations;
 			sourceTree = "<group>";

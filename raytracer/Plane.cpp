@@ -18,12 +18,12 @@ Vector Plane::normal(const Vector & pos) const {
 	return norm;
 }
 
-std::unique_ptr<Intersection> Plane::intersect(const Ray & ray) const {
+std::pair<bool, Intersection> Plane::intersect(const Ray & ray) const {
 	auto denom = Vector::dot(norm, ray.dir);
 	if (denom > 0) {
-		return nullptr;
+		return std::make_pair(false, Intersection());
 	} else {
 		auto dist = (Vector::dot(norm, ray.start) + offset) / (-denom);
-		return std::unique_ptr<Intersection>(new Intersection(*this, ray, dist));
+		return std::make_pair(true, Intersection(*this, ray, dist));
 	}
 }

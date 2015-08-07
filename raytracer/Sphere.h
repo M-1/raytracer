@@ -19,7 +19,7 @@ struct Sphere : public Thing {
 	
 	virtual Vector normal(const Vector & pos) const;
 	
-	virtual std::unique_ptr<Intersection> intersect(const Ray & ray) const;
+	virtual std::pair<bool, Intersection> intersect(const Ray & ray) const;
 
 };
 

@@ -9,7 +9,7 @@
 #ifndef __raytracer__Thing__
 #define __raytracer__Thing__
 
-#include <memory>
+#include <utility>
 
 struct Intersection;
 struct Ray;
@@ -17,8 +17,7 @@ struct Vector;
 struct Surface;
 
 struct Thing {
-	// these member functions need to return an interface (usage of pointer/reference is necessary for polymorphism) -> used unique_ptr for automatic freeing
-	virtual std::unique_ptr<Intersection> intersect(const Ray & ray) const = 0;
+	virtual std::pair<bool, Intersection> intersect(const Ray & ray) const = 0; // TODO: use optional<Intersection> instead
 	virtual Vector normal(const Vector & pos) const = 0;
 	
 	explicit Thing(const Surface & surface);
